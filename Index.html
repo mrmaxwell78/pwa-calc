@@ -8,15 +8,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="~/src/style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="src/calculator.js"></script>
+    <script src="serviceworker.js"></script>
 </head>
 
 <body>
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <div class="flex">
-        <h1>Calculator</h1>
+    <div class="main">
+        <h5><em>Please do not divide by 0</em></h5>
         <input type="number" /> <br />
         <button class="flex" id="1">1</button>
         <button class="flex" id="2">2</button>
