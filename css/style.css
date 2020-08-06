@@ -13,6 +13,8 @@ div.main {
 }
 button.flex {
     display:inline-flex;
+    height: 50%;
+    width: 25%;
 }
 
 /* Chrome, Safari, Edge, Opera */ /* these do nothing (╯°□°）╯︵ ┻━┻ */
