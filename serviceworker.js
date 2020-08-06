@@ -1,4 +1,4 @@
-const staticDevCoffee = "pwa-calc-site-v1"
+const staticPWACalc = "pwa-calc-site-v1"
 const assets = [
   "/",
   "/index.html",
@@ -17,7 +17,7 @@ const assets = [
 
 self.addEventListener("install", installEvent => {
   installEvent.waitUntil(
-    caches.open(staticDevCoffee).then(cache => {
+    caches.open(staticPWACalc).then(cache => {
       cache.addAll(assets)
     })
   )
