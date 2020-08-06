@@ -4,6 +4,13 @@ body {
     background-color: #00e;
 }
 
+div.flex {
+    display:flex;
+}
+button.flex {
+    display:inline-flex;
+}
+
 /* Chrome, Safari, Edge, Opera */ /* these do nothing (╯°□°）╯︵ ┻━┻ */
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
