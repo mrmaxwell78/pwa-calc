@@ -10,14 +10,17 @@ div.main {
     display:inline-block;
     height: 100%;
     width: 100%;
+    margin: auto;
 }
 button.flex {
     display:inline-flex;
-    height: 50%;
-    width: 25%;
+    height: auto;
+    width: auto;
+}
+#zero {
+  width: 6%;
 }
 
-/* Chrome, Safari, Edge, Opera */ /* these do nothing (╯°□°）╯︵ ┻━┻ */
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
   -webkit-appearance: none; 

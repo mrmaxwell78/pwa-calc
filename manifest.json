@@ -8,22 +8,22 @@
     "orientation": "portrait-primary",
     "icons": [
         {
-            "64": "/image/calculator_64x64.png",
+            "src": "/image/calculator_64x64.png",
             "type":"image/png",
             "size": "64x64"
         },
         {
-            "128": "/image/calculator_128x128.png",
+            "src": "/image/calculator_128x128.png",
             "type":"image/png",
             "size":"128x128"
         },
         {
-            "144": "/image/calculator_144x144.png",
+            "src": "/image/calculator_144x144.png",
             "type":"image/png",
             "size":"144x144"
         },
         {
-            "256": "/image/calculator_256x256.png",
+            "src": "/image/calculator_256x256.png",
             "type":"image/png",
             "size":"256x256"
         }
