@@ -17,7 +17,7 @@ function UpdateBox(event){
 }
 
 function Clear(){
-    document.getElementById("numBox").value = 0;
+    document.getElementById("numBox").value = "";
 }
 
 function Add(val){
