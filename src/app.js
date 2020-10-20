@@ -13,7 +13,6 @@ if ("serviceWorker" in navigator) {
           '/',
           '/index.html',
           '/css/style.css',
-          '/src/app.js',
           '/src/calc.js'
         ]);
       })
