@@ -5,47 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>PWA Calculator</title>
     <meta name="description" content="test of a pwa calculator">
-    <link rel="icon" type="image/png" href="/image/calculator_64x64.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="src/app.js"></script>
-    <script src="serviceworker.js"></script>
+    <link rel="stylesheet" href="~/src/style.css">
 </head>
 
 <body>
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <div class="main">
-        <div id="error"></div>
-        <h5><em>Please do not divide by 0</em></h5>
-        <input type="number" id="numBox"/> <br />
-        <button class="flex button" onclick="Clear()">C</button>
-        <button class="flex button">M+</button>
-        <button class="flex button">M-</button>
-        <button class="operator">+</button>
+    <div class="flex">
+        <h1>Calculator</h1>
+        <input type="number" /> <br />
+        <button class="flex" id="1">1</button>
+        <button class="flex" id="2">2</button>
+        <button class="flex" id="3">3</button>
         <br />
-        <button class="flex button" id="one" value="1" onclick="UpdateBox(event)">1</button>
-        <button class="flex button" id="two" value="2" onclick="UpdateBox(event)">2</button>
-        <button class="flex button" id="three" value="3" onclick="UpdateBox(event)">3</button>
-        <button class="operator">-</button>
-        <br /> 
-        <button class="flex button" id="four" onclick="UpdateBox(event)">4</button>
-        <button class="flex button" id="five" onclick="UpdateBox(event)">5</button>
-        <button class="flex button" id="six" onclick="UpdateBox(event)">6</button>
-        <button class="operator">*</button>
+        <button class="flex" id="4">4</button>
+        <button class="flex" id="5">5</button>
+        <button class="flex" id="6">6</button>
         <br />
-        <button class="flex button" id="seven" onclick="UpdateBox(event)">7</button>
-        <button class="flex button" id="eight" onclick="UpdateBox(event)">8</button>
-        <button class="flex button" id="nine" onclick="UpdateBox(event)">9</button>
-        <button class="operator">/</button>
+        <button class="flex" id="7">7</button>
+        <button class="flex" id="8">8</button>
+        <button class="flex" id="9">9</button>
         <br />
-        <button class="flex button" id="zero">0</button>
-        
-        <br />
-
+        <button class="flex" id="0">0</button>
     </div>
 </body>
 </html>

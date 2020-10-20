@@ -1,0 +1,24 @@
+body {
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    background-color: #00e;
+}
+
+div.flex {
+    display:flex;
+}
+button.flex {
+    display:inline-flex;
+}
+
+/* Chrome, Safari, Edge, Opera */ /* these do nothing (╯°□°）╯︵ ┻━┻ */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
