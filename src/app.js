@@ -1,41 +1,30 @@
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", function() {
       navigator.serviceWorker
-        .register("/serviceWorker.js")
-        // .then(res => console.log("service worker registered"))
+        .register("/src/app.js")
+        .then(res => console.log("service worker registered"))
         .catch(err => console.log("service worker not registered", err))
     })
   }
-
-var result = 0;
-var total = 0;
-
-function UpdateBox(event){
-    document.getElementById("numBox").value += event.target.value;
-// console.log(this);
-//console.log(event.target.value)
-}
-
-function Clear(){
-    document.getElementById("numBox").value = "";
-}
-
-function Add(val){
-    total += val;
-    result = total;
-}
-
-function Divid(val){
-    result /= val;
-    result = total;
-}
-
-function Multiply(val){
-    result *= val;
-    result = total;
-}
-
-function Subtract(val){
-    result -= val;
-    result = total;
-}
+  self.addEventListener('install', function(e) {
+    e.waitUntil(
+      caches.open('pwa-calc').then(function(cache) {
+        return cache.addAll([
+          '/',
+          '/index.html',
+          '/css/style.css',
+          '/src/app.js',
+          '/src/calc.js'
+        ]);
+      })
+    );
+   });
+   self.addEventListener('fetch', event => {
+    event.respondWith(
+      caches.open(cacheName)
+        .then(cache => cache.match(event.request, {ignoreSearch: true}))
+        .then(response => {
+        return response || fetch(event.request);
+      })
+    );
+  });

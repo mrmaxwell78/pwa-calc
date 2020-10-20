@@ -11,41 +11,34 @@
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="css/style.css">
     <script src="src/app.js"></script>
-    <script src="serviceworker.js"></script>
+    <script src="src/calc.js" defer></script>
 </head>
 
 <body>
-    <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    <div class="main">
-        <div id="error"></div>
-        <h5><em>Please do not divide by 0</em></h5>
-        <input type="number" id="numBox"/> <br />
-        <button class="flex button" onclick="Clear()">C</button>
-        <button class="flex button">M+</button>
-        <button class="flex button">M-</button>
-        <button class="operator">+</button>
-        <br />
-        <button class="flex button" id="one" value="1" onclick="UpdateBox(event)">1</button>
-        <button class="flex button" id="two" value="2" onclick="UpdateBox(event)">2</button>
-        <button class="flex button" id="three" value="3" onclick="UpdateBox(event)">3</button>
-        <button class="operator">-</button>
-        <br /> 
-        <button class="flex button" id="four" onclick="UpdateBox(event)">4</button>
-        <button class="flex button" id="five" onclick="UpdateBox(event)">5</button>
-        <button class="flex button" id="six" onclick="UpdateBox(event)">6</button>
-        <button class="operator">*</button>
-        <br />
-        <button class="flex button" id="seven" onclick="UpdateBox(event)">7</button>
-        <button class="flex button" id="eight" onclick="UpdateBox(event)">8</button>
-        <button class="flex button" id="nine" onclick="UpdateBox(event)">9</button>
-        <button class="operator">/</button>
-        <br />
-        <button class="flex button" id="zero">0</button>
-        
-        <br />
-
-    </div>
+    <div class="calculator-grid">
+        <div class="output">
+          <div data-previous-operand class="previous-operand"></div>
+          <div data-current-operand class="current-operand"></div>
+        </div>
+        <button data-all-clear class="span-two">AC</button>
+        <button data-delete>DEL</button>
+        <button data-operation>÷</button>
+        <button data-number>1</button>
+        <button data-number>2</button>
+        <button data-number>3</button>
+        <button data-operation>*</button>
+        <button data-number>4</button>
+        <button data-number>5</button>
+        <button data-number>6</button>
+        <button data-operation>+</button>
+        <button data-number>7</button>
+        <button data-number>8</button>
+        <button data-number>9</button>
+        <button data-operation>-</button>
+        <button data-number>.</button>
+        <button data-number>0</button>
+        <button data-equals class="span-two">=</button>
+      </div>
+      <!-- <script>navigator.serviceWorker.register('/src/app.js');</script> -->
 </body>
 </html>
